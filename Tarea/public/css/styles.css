@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-container {
+  flex-grow: 1;
+}
+.container {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(128, 0, 0, 0.7243348022802871) 40%,
+    rgba(0, 0, 255, 0.7775560907956933) 100%
+  );
+}
+#formulario{
+    padding: 8%;
+    /* margin-right: 8%; */
+}

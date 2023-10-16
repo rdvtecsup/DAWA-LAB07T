@@ -1,0 +1,33 @@
+<%- include('header.ejs') %>
+<div class="container p-4 mt-4">
+  <main>
+    <h1>Lista de Canciones</h1>
+    <div class="row">
+      <% data.canciones.forEach(function(cancion) { %>
+      <div class="col-md-4">
+        <div class="card m-3">
+          <h5 class="card-header">Artista: <%= cancion.artista %></h5>
+          <div class="card-body">
+            <h5 class="card-title">Nombre: <%= cancion.nombre %></h5>
+            <p class="card-text">Albúm <%= cancion.album %></p>
+            <p class="card-text">Género <%= cancion.genero %></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="<%= cancion.enlace %>" class="btn btn-primary"
+                >Ir a la canción</a
+              >
+              <form action="/eliminar" method="POST">
+                  <input
+                    type="hidden"
+                    name="cancionId"
+                  />
+                  <button type="submit" class="btn btn-danger">Eliminar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </main>
+</div>
+<%- include('footer.ejs') %>

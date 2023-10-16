@@ -1,0 +1,45 @@
+<%- include('header.ejs') %>
+<div class="container p-4 mt-4">
+  <main>
+    <div class="card p-3">
+      <div class="card-header p-2"><h4>Agregar Canción</h4></div>
+      <div class="card-body">
+        <form method="post" action="/canciones">
+          <div class="input-group input-group-sm mb-3">
+            <span for="nombre" class="input-group-text">Nombre</span>
+            <input type="text" class="form-control" name="nombre" />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span for="artista" class="input-group-text">Artista</span>
+            <input type="text" class="form-control" name="artista" />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span for="duracion" class="input-group-text">Duración</span>
+            <input type="text" class="form-control" name="duracion" />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span for="album" class="input-group-text">Album</span>
+            <input type="text" class="form-control" name="album" />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span for="genero" class="input-group-text">Genero</span>
+            <input type="text" class="form-control" name="genero" />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span for="enlace" class="input-group-text">Enlace</span>
+            <input type="text" class="form-control" name="enlace" />
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary" type="submit">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+<%- include('footer.ejs') %>
